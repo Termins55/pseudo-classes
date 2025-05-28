@@ -1,3 +1,38 @@
 * {
   box-sizing: border-box;
 }
+
+a {
+    color: inherit;
+}
+
+a:link {
+    color: yellow;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    background-color: gray;
+}
+
+a:active {
+    color: green;
+}
+
+input {
+    outline: none;
+    border: 1px solid black;
+}
+
+input:focus {
+    background-color: aquamarine;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
