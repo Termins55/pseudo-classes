@@ -43,7 +43,8 @@
     right: 10px;
 }
 
-/* місце в потоці не резервується */
+/* місце в потоці не резервується 
+2 top, right, bottom, left  відносно вьюпорта */
 .child:nth-child(4) {
     background-color: lightblue;
     position: fixed;
