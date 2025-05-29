@@ -2,69 +2,15 @@
   box-sizing: border-box;
 }
 
-:root {
-    --article-width: yellow;
+table {
+    border: 2px solid black;
+    /* схлопування границь */
+    border-collapse: collapse;
+    /* відстань між комірками */
+    border-spacing: 0;
 }
 
-section *, article * {
-    margin-bottom: 10px;
-}
-
-/* section :first-child {
-    color: red;
-}
-
-section :last-child {
-    color: green;
-} */
-
-/* section :first-of-type {
-    background-color: aquamarine;
-}
-
-div:first-of-type {
-    background-color: blueviolet;
-} */
-
-/* div:first-child {
-    color: yellow; не правильно
-} */
-
-section :nth-child(2n) {
-    color: gray;
-}
-/* 0 :2*0 = 0
-1 :2*1 = 2
-2 :2*2 = 4 */
-
-section :nth-child(2n + 1) {
-    color: blue;
-}
-
-section :nth-child(7) {
-    background-color: green;
-}
-
-/* section :nth-child(3n) {
-    border-left: 5px solid red;
-} */
-
-/* :first-child
-:first-of-type
-
-:last-child
-:last-of-type
-
-:nth-child()
-:nth-of-type() */
-
-/* виділити курсивом перший абзац
-віділити жирним останній абзац */
-
-p :first-of-type {
-    font-style: italic;
-}
-
-article :last-child {
-    font-weight: bold;
+td, th {
+    border: 2px solid black;
+    padding: 5px;
 }
