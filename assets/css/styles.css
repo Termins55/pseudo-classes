@@ -2,48 +2,61 @@
   box-sizing: border-box;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+.parent {
+    border: 5px solid green;
+    position: relative;
+    width: 400px;
+    height: 100%;
 }
 
-th, td {
-    padding: 10px;
+.child {
+    border: 5px solid red;
+    width: 100px;
+    height: 100px;
 }
 
-thead th:nth-child(1) {
-    background-color: #7787a9;
+/* static */
+.child:nth-child(1) {
+    position: static; /*defoult*/
 }
 
-thead th:nth-child(2) {
-    background-color: #4d628f;
+/* relative
+1 місце в потоці резеврується
+2 top, right, bottom, left  відносно свого положення в нормальному потоці*/
+.child:nth-child(2) {
+    background-color: yellow;
+    position: relative;
+    /* top: 50px; */
+    /* bottom: -20px; */
+    /* left: 100px; */
+    /* right: 20px; */
+    /* z-index: -1; */
 }
 
-thead th:nth-child(3) {
-    background-color: #2a4271;
+/* absolute 
+1 місце у потоці не резервується
+2 top, right, bottom, left  відносно положення найближчого позиціонованого предка в нормальному потоці*/
+.child:nth-child(3) {
+    background-color: orange;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
 }
 
-thead th:nth-child(4) {
-    background-color: #152857;
+.child:nth-child(4) {
+    background-color: orange;
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
-td:nth-child(2), td:nth-child(3), td:nth-child(4) {
-    text-align: center;
+.child:nth-child(5) {
+    background-color: orange;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    border-radius: 50%;
+    background-color: green;
 }
-
-tr:nth-child(2n+1) td:nth-child(2n+1) {
-    background-color: #dbdbdb;
-}
-
-tr:nth-child(2n) td:nth-child(2n) {
-    background-color: #f3f3f3;
-}
-
-tr:nth-child(2n) td:nth-child(2n+1),
-tr:nth-child(2n+1) td:nth-child(2n) {
-    background-color:  #e6e6e6;
-}
-
-
 
 
