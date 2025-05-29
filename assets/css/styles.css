@@ -3,14 +3,7 @@
 }
 
 table {
-    border: 2px solid black;
-    /* схлопування границь */
     border-collapse: collapse;
-    /* відстань між комірками */
     border-spacing: 0;
 }
 
-td, th {
-    border: 2px solid black;
-    padding: 5px;
-}
