@@ -2,16 +2,47 @@
   box-sizing: border-box;
 }
 
-.btn {
-  border: none;
-  border-radius: 15px;
-  margin: 20px;
-  color: white;
-  background-color: darkgreen;
-  transition: background-color 1s linear, box-shadow 1s linear;;
+body {
+  background-color: grey;
 }
 
-.btn:hover {
-  background-color: lightgreen;
-  box-shadow: 0 0 5px  black;
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* color: white; */
+}
+
+.bg {
+  background-image: url("https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1200");
+  filter: blur(3px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1, .bg {
+  transition: filter 0.5s ease-in;
+}
+
+header:hover h1 {
+  filter: blur(2px);
+}
+
+header:hover .bg {
+  filter: blur(0);
+}
+
+button {
+  transition: transform 0.5s;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
