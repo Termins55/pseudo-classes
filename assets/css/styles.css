@@ -1,3 +1,45 @@
 * {
   box-sizing: border-box;
 }
+
+/* .first-letter {
+  font-size: 30px;
+  color: red;
+} */
+
+p::first-letter {
+  font-size: 30px;
+  color: red;
+}
+
+p::first-line {
+  font-style: italic;
+}
+
+body {
+  background-color: burlywood;
+}
+
+*::selection {
+  background-color: gray;
+}
+
+p::before {
+  content: 'Paragraph';
+}
+
+p::after {
+  content: '-End of paragraph';
+}
+
+h1::before {
+  content: '<<';
+}
+
+h1::after {
+  content: '>>';
+}
+
+li::marker {
+  color: aquamarine;
+}
