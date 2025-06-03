@@ -5,10 +5,13 @@
 
 .outer-container {
   border: 2px solid green;
+  height: 400px;
 }
 
 .inner-block {
   border: 2px solid red;
+  height: 50px;
+  width: 50px;
 }
 
 .grid-parent {
@@ -18,12 +21,17 @@
   /* px, %, vw, fr, minmax(320px, 800px) */
   /* repeat (фіксована к-ть/ автокількість (auto-fill, auto-fit)/ ширина) */
   /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, 100px);
   /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
-  /* grid-template-rows: repeat(4, 200px); */
-/* неявна сітка */
-  grid-auto-flow: row;
-  grid-auto-rows: 75px;
+  grid-template-rows: repeat(2, 100px);
+
+  /* розташування елементів вздовж осей в середині комірки */
+  justify-items: end;
+  align-items: start;
+
+  /* розташування комірок вздовж осей */
+  justify-content: center;
+  align-content: center;
 }
 
 .grid-child {
