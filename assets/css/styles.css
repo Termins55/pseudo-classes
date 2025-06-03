@@ -3,41 +3,29 @@
   box-sizing: border-box;
 }
 
-body {
-  font-size: clamp(16px, 4vw, 40px);
+.outer-container {
+  border: 2px solid green;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px ;
+.inner-block {
+  border: 2px solid red;
 }
 
-p {
-  padding: 30px;
-  background-color: green;
+.grid-parent {
+  display: grid;
+  /* явна сітка */
+  /* grid */
+  /* px, %, vw, fr, minmax(320px, 800px) */
+  /* repeat (фіксована к-ть/ автокількість (auto-fill, auto-fit)/ ширина) */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  /* grid-template-rows: repeat(4, 200px); */
+/* неявна сітка */
+  grid-auto-flow: row;
+  grid-auto-rows: 75px;
 }
 
-/* mobile first */
-/* 400-infinity */
-@media screen and (min-width: 400px) {
-  p {
-    padding: 40px;
-  }
+.grid-child {
+
 }
-
-
-
-/* 600-infinity */
-@media screen and (min-width: 600px) {
-  section {
-    flex-direction: row;
-  }
-  p {
-    padding: 20px;
-  }
-}
-
-/* 400-599 padding 40px */
-/* 600+ padding 20px */
-
